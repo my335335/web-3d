@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submission Details - The Luck Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 15px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        p, li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        strong {
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Luck Lab – Interactive Dice & Chance Machine</h1>
+
+        <section id="student-details">
+            <h2>Student Information</h2>
+            <p><strong>Student Name:</strong> Muhan Yang</p>
+            <p><strong>Student ID:</strong> 281781</p>
+            <p><strong>Assignment Title:</strong> 3D App</p>
+        </section>
+
+        <section id="project-access">
+            <h2>Project Access & Links</h2>
+            <ul>
+                <li>
+                    <strong>Primary Access Method:</strong> Submitted Zip Archive / Shared Folder Link.
+                </li>
+                <li>
+                    <strong>Path to Main Application File:</strong> <code>luck-lab-project/index.html</code>
+                    <br><em>(Requires running from a local web server - see notes below).</em>
+                </li>
+                <li>
+                    <strong>GitHub Repository (Contains full codebase and version history):</strong>
+                    <br><a href="[YOUR_GITHUB_REPO_LINK_HERE]" target="_blank">[YOUR_GITHUB_REPO_LINK_HERE]</a>
+                    <br><em>(Please ensure the repository is public or access has been granted).</em>
+                </li>
+                <li>
+                    <strong>Path to Blender Source Model Files:</strong> <code>luck-lab-project/models/</code>
+                    <br><em>(Contains <code>die6.blend</code>, <code>die12.blend</code>, and <code>coin.blend</code>).</em>
+                </li>
+            </ul>
+        </section>
+
+        <section id="marker-notes">
+            <h2>Notes for Marker</h2>
+            <ul>
+                <li>
+                    <strong>Running the Application:</strong> Due to browser security policies (CORS) for loading 3D models and ES6 modules locally (<code>file:///</code> protocol), the application <strong>must be run via a local web server</strong>.
+                    <ul>
+                        <li>Option A: Using Python's built-in server: Navigate to the <code>luck-lab-project</code> directory in the terminal and run <code>python -m http.server</code> (for Python 3) or <code>python -m SimpleHTTPServer</code> (for Python 2). Then access via <code>http://localhost:8000</code>.</li>
+                        <li>Option B: Using VS Code with the "Live Server" extension.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Key Features to Evaluate:</strong>
+                    <ul>
+                        <li>Model Loading & Selection (D6, D12, Coin via dropdown).</li>
+                        <li>Interactive Roll/Flip functionality (Click button or model).</li>
+                        <li>Theme Swapping (Dropdown changes background, lighting, potentially model textures).</li>
+                        <li>Roll History Panel (Displays last 5 outcomes).</li>
+                        <li>Wireframe Toggle (Button switches between solid and wireframe views).</li>
+                        <li>Fate Mode (Checkbox enables automatic timed rolls/flips).</li>
+                        <li>Lighting Controls (Buttons to toggle ambient/directional lights).</li>
+                        <li>Responsive Design (Layout should adapt to different screen sizes).</li>
+                        <li>Model Creation Details: Described in <code>about.html</code> under "References, Attributions & Model Creation Process".</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Required Files Included:</strong> All necessary HTML, CSS, JavaScript, GLB models, and corresponding Blender (<code>.blend</code>) source files are included in the submission structure.
+                </li>
+                <li>
+                    <strong>Attributions & Originality:</strong> Please refer to the <code>about.html</code> page for the Statement of Originality and detailed attributions for any third-party assets or libraries used.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Optional: Set date dynamically if needed, otherwise keep static date.
+        // document.getElementById('submission-date').textContent = new Date().toLocaleDateString('en-GB');
+    </script>
+</body>
+</html>
+ 

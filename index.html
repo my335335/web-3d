@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Luck Lab - Interactive Dice & Chance Machine</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    </head>
+<body>
+    <header>
+        <h1>🎲 The Luck Lab</h1>
+        <p>Your Personal Probability Playground</p>
+    </header>
+
+    <nav id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <audio id="background-music" loop src="audio/background_theme.mp3">
+		Your browser does not support the audio element.
+	</audio>
+
+    <main>
+        <section id="controls-panel">
+            <h2>Controls</h2>
+            <div class="control-group">
+                <label for="theme-select">Select Theme:</label>
+                <select id="theme-select">
+                    <option value="default">Default Lab</option>
+                    <option value="fantasy">Mystical Grove</option>
+                    <option value="scifi">Cyber Punk Alley</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="model-select">Select Object:</label>
+                <select id="model-select">
+                    <option value="d6">Six-sided Die (D6)</option>
+                    <option value="d12">Twelve-sided Die (D12)</option>
+                    <option value="coin">Spinning Coin</option>
+                </select>
+            </div>
+            <button id="roll-button">Explode & Roll</button>
+            <button id="wireframe-toggle">View Wireframe</button>
+            <button id="glow-spin-toggle">Glow & Spin</button>
+            <div class="control-group">
+                <label for="size-slider">Adjust Size:</label>
+                <input type="range" id="size-slider" min="0.5" max="2.5" step="0.1" value="1.0">
+                <span id="size-value">1.0x</span>
+            </div>
+             <div class="control-group">
+                <h3>Lighting</h3>
+                <button id="light-toggle-ambient" class="active">Ambient Light ON</button>
+                <button id="light-toggle-directional" class="active">Directional Light ON</button>
+            </div>
+            <div class="control-group">
+                <h3>Interaction</h3>
+                <button id="reset-view-button">Reset View</button>
+                <button id="music-toggle">Play Music</button>
+             </div>
+             <div class="control-group fate-mode">
+                <label for="fate-mode-toggle">Fate Mode:</label>
+                <input type="checkbox" id="fate-mode-toggle">
+                <span class="tooltip">Auto-roll every 10s.</span>
+            </div>
+        </section>
+
+        <section id="scene-container">
+            <div id="loading-indicator" style="display: none;"> <div class="spinner"></div>
+                Loading Model...
+            </div>
+        </section>
+
+        <aside id="info-panel">
+            <div id="outcome-display">
+                <h2>Outcome</h2>
+                <p id="result-text">-</p>
+            </div>
+            <div id="roll-history">
+                <h2>Roll History (Last 5)</h2>
+                <ul id="history-list">
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+            </div>
+        </aside>
+
+        </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Muhan Yang/281781 - Luck Lab Project. <a href="about.html#references">References & Attributions</a></p>
+    </footer>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="js/app.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
